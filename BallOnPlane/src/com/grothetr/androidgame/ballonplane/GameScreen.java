@@ -86,8 +86,8 @@ public class GameScreen extends Screen{
 		//show motion info
 		
 		Input in = game.getInput();
-		g.drawText("x acceleration: " + Float.toString(-1 * in.getAccelX()), 10, 50, Color.BLACK, Assets.font, 20);
-		g.drawText("y acceleration: " + Float.toString(in.getAccelY()), 10, 100, Color.BLACK, Assets.font, 20);
+		g.drawText("x acceleration: " + Float.toString(-1 * in.getAccelX() * Settings.gravity), 10, 50, Color.BLACK, Assets.font, 20);
+		g.drawText("y acceleration: " + Float.toString(in.getAccelY() * Settings.gravity), 10, 100, Color.BLACK, Assets.font, 20);
 		g.drawText("x velocity: " + Float.toString(-1*ball.vx), 10, 150, Color.BLACK, Assets.font, 20);
 		g.drawText("y velocity: " + Float.toString(ball.vy), 10, 200, Color.BLACK, Assets.font, 20);
 		g.drawText("x pos: " + Float.toString(ball.x), 10, 250, Color.BLACK, Assets.font, 20);
