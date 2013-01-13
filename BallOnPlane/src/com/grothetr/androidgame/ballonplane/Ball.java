@@ -18,7 +18,7 @@ public class Ball {
 	public void update(float deltaTime, float[] accel){
 		
 		for (int i = 0; i < accel.length; i++){
-			accel[i] = accel[i] / Settings.mass;
+			accel[i] = accel[i] * Settings.gravity;
 		}
 		
 		final float NRGSAVED = .65f; // percentage of velocity that will remain when bouncing

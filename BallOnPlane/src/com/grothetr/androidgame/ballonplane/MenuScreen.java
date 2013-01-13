@@ -39,12 +39,12 @@ public class MenuScreen extends Screen{
 				}
 				
 				if (inBounds(event, MINUSX, MINUSY, 96, 96)){
-					if (Settings.mass > 0)
-						Settings.mass = Settings.mass - .1f;
-					else Settings.mass = 0;
+					
+					Settings.gravity = Settings.gravity - .1f;
+					
 				}
 				if (inBounds(event, PLUSX, PLUSY, 96, 96)){
-					Settings.mass = Settings.mass + .1f;
+					Settings.gravity = Settings.gravity + .1f;
 				}
 			}
 		}
@@ -65,8 +65,8 @@ public class MenuScreen extends Screen{
 		g.drawPixmap(Assets.start, START_TEXT_X, START_TEXT_Y);
 		g.drawPixmap(Assets.minus, MINUSX, MINUSY);
 		g.drawPixmap(Assets.plus, PLUSX, PLUSY);
-		g.drawText(Float.toString(Settings.mass), 240, 750, Color.BLACK, Assets.font, 40);
-		g.drawText("change the mass of the ball", 20, 680, Color.BLACK, Assets.font, 20);
+		g.drawText(Float.toString(Settings.gravity), 240, 750, Color.BLACK, Assets.font, 40);
+		g.drawText("Acceleration of Gravity Multiplier", 20, 680, Color.BLACK, Assets.font, 20);
 		
 		
 	}
