@@ -92,7 +92,7 @@ public class GameScreen extends Screen{
 		g.drawText("y velocity: " + Float.toString(ball.vy), 10, 200, Color.BLACK, Assets.font, 20);
 		g.drawText("x pos: " + Float.toString(ball.x), 10, 250, Color.BLACK, Assets.font, 20);
 		g.drawText("y pos: " + Float.toString(ball.y), 10, 300, Color.BLACK, Assets.font, 20);
-		g.drawText("acceleration of gravity: " + Float.toString(Settings.gravity), 10, 350, Color.BLACK, Assets.font, 15);
+		g.drawText("acceleration of gravity: " + Float.toString(Settings.gravity * 9.8f), 10, 350, Color.BLACK, Assets.font, 15);
 		
 		
 	}
