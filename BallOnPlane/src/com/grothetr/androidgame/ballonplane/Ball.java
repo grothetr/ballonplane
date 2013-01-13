@@ -4,15 +4,22 @@ import android.os.SystemClock;
 import android.util.Log;
 
 public class Ball {
-	float x=240;
-	float y=300;
+	float x;
+	float y;
 	
 	float vx = 0;
 	float vy = 0;
 	
-	
+	public Ball(float x, float y){
+		this.x = x;
+		this.y = y;
+	}
 	
 	public void update(float deltaTime, float[] accel){
+		
+		for (int i = 0; i < accel.length; i++){
+			accel[i] = accel[i] / Settings.mass;
+		}
 		
 		final float NRGSAVED = .65f; // percentage of velocity that will remain when bouncing
 		
@@ -33,11 +40,6 @@ public class Ball {
 		
 		x += -1 * vx * deltaTime;
 		y += vy * deltaTime;
-		Log.d("vel x y: ", Float.toString(vx) + "   " + Float.toString(vy));
-		
-		
-		
-		
 		
 	}
 	

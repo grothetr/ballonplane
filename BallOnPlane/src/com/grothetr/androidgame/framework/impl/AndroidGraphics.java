@@ -136,9 +136,9 @@ public class AndroidGraphics implements Graphics {
     }
 
 
-	public void drawText(String text, int x, int y, int color, Typeface font) {
+	public void drawText(String text, int x, int y, int color, Typeface font, float size) {
 		paint.setColor(color);
-    	paint.setTextSize(30);
+    	paint.setTextSize(size);
     	paint.setTypeface(font);
     	canvas.drawText(text, x, y, paint);
 	}

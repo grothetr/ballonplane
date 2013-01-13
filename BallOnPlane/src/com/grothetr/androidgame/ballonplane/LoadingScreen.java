@@ -24,8 +24,11 @@ public class LoadingScreen extends Screen {
 		Assets.white = g.newPixmap("white.png", PixmapFormat.RGB565);
 		Assets.font = Typeface.MONOSPACE;
 		Assets.ball = g.newPixmap("ball.png", PixmapFormat.ARGB4444);
-		
-		game.setScreen(new GameScreen(game));
+		Assets.start = g.newPixmap("start.png", PixmapFormat.ARGB4444);
+		Assets.plus = g.newPixmap("plus.png", PixmapFormat.ARGB4444);
+		Assets.minus = g.newPixmap("minus.png", PixmapFormat.ARGB4444);
+		Assets.back = g.newPixmap("back.png", PixmapFormat.ARGB4444);
+		game.setScreen(new MenuScreen(game));
 	}
 
 	@Override
